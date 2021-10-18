@@ -203,7 +203,7 @@ def run(weights=ROOT / 'yolov5s.pt',  # model.pt path(s)
             w = (float(i[2]) - float(i[0]))
             h= (float(i[3]) - float(i[1]))
             now = datetime.datetime.now()
-            if i[5] == 0.00000:
+            if i[5] == 0.00000:  #강아지만 찾기 위해 코드 수정 되었습니다 (1.60000e+01 >> 0.00000)
                 exist_dog = True
                 asd = {
                     "confidence":c,
